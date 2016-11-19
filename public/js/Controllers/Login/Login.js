@@ -48,27 +48,29 @@ Controllers.Login = function(options) {
     this.postRender = function() {
         var self = this;
         var s = Snap("#logo");
+        var offset = $("#logo").offset();
 
         // Now lets create another small circle:
-        var smallCircle = s.circle(100, 150, 70);
         // Lets put this small circle and another one into a group:
-        var discs = s.group(smallCircle, s.circle(200, 150, 70));
-
+        var discs = s.group(
+            s.circle(0, 0, 32).attr({fill: "#fafafa"})
+        );
         Snap.load("images/cards.svg", function(fragment) {
-            fragment.selectAll("g").attr({
-                stroke: "#fafafa",
-                fill: "#fafafa"
-            })
-            discs.attr({
-                mask: fragment,
-                    stroke: "#fafafa",
-                    fill: "#fafafa"
-            });
-            discs.selectAll("circle").forEach(function(circle) {
-                console.log(circle);
-                circle.animate({r: 100}, 1000, mina.elastic);
+            fragment.selectAll("g").attr({fill: "#fafafa"});
+            discs.attr({mask: fragment});
+            discs.selectAll("circle").animate({r: 100}, 1000, mina.elastic, function() {
+                discs.selectAll("circle").animate({cx: 128, cy: 64}, 1000, mina.elastic);
             });
             s.append(fragment);
+
+            discs.drag(
+                function(dx, dy, x, y) {
+                    discs.selectAll("circle").animate({
+                        cx: x - offset.left - 50,
+                        cy: y - offset.top - 50
+                    }, 1000, mina.elastic);
+                }
+            );
         });
 
     };
