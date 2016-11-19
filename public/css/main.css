@@ -1,71 +1,71 @@
 @font-face {
   font-family: "HelveticaNeue";
   font-weight: 100;
-  src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-UltLt.otf"); }
+  src: url("../fonts/HelveticaNeue/HelveticaNeueLTPro-UltLt.otf"); }
 @font-face {
   font-family: "HelveticaNeue";
   font-weight: 200;
-  src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-Lt.otf"); }
+  src: url("../fonts/HelveticaNeue/HelveticaNeueLTPro-Lt.otf"); }
 @font-face {
   font-family: "HelveticaNeue";
   font-weight: 300;
-  src: url("../../public/fonts/HelveticaNeue/HelveticaNeue.ttf"); }
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.ttf"); }
 @font-face {
   font-family: "HelveticaNeue";
   font-weight: 400;
-  src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-Bd_0.otf"); }
+  src: url("../fonts/HelveticaNeue/HelveticaNeueLTPro-Bd_0.otf"); }
 @font-face {
   font-family: "ProximaNova";
   font-weight: 300;
-  src: url("../../public/fonts/ProximaNova/ProximaNova-Regular.otf"); }
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.otf"); }
 @font-face {
   font-family: "ProximaNova";
   font-weight: 200;
-  src: url("../../public/fonts/ProximaNova/ProximaNova-Light.otf"); }
+  src: url("../fonts/ProximaNova/ProximaNova-Light.otf"); }
 @font-face {
   font-family: "ProximaNova";
   font-weight: 400;
-  src: url("../../public/fonts/ProximaNova/ProximaNova-Semibold.otf"); }
+  src: url("../fonts/ProximaNova/ProximaNova-Semibold.otf"); }
 @font-face {
   font-family: "GothamRounded";
   font-weight: 300;
-  src: url("../../public/fonts/Gotham/rounded/gotham-rounded-light.otf"); }
+  src: url("../fonts/Gotham/rounded/gotham-rounded-light.otf"); }
 @font-face {
   font-family: "GothamRounded";
   font-weight: 400;
-  src: url("../../public/fonts/Gotham/rounded/gotham-rounded-book.otf"); }
+  src: url("../fonts/Gotham/rounded/gotham-rounded-book.otf"); }
 @font-face {
   font-family: "GothamRounded";
   font-weight: 500;
-  src: url("../../public/fonts/Gotham/rounded/gotham-rounded-medium.otf"); }
+  src: url("../fonts/Gotham/rounded/gotham-rounded-medium.otf"); }
 @font-face {
   font-family: "GothamRounded";
   font-weight: 700;
-  src: url("../../public/fonts/Gotham/rounded/gotham-rounded-bold.otf"); }
+  src: url("../fonts/Gotham/rounded/gotham-rounded-bold.otf"); }
 @font-face {
   font-family: "GothamNarrow";
   font-weight: 100;
-  src: url("../../public/fonts/Gotham/narrow/GothamNarrow-Xlight.otf"); }
+  src: url("../fonts/Gotham/narrow/GothamNarrow-Xlight.otf"); }
 @font-face {
   font-family: "GothamNarrow";
   font-weight: 200;
-  src: url("../../public/fonts/Gotham/narrow/GothamNarrow-Light.otf"); }
+  src: url("../fonts/Gotham/narrow/GothamNarrow-Light.otf"); }
 @font-face {
   font-family: "GothamNarrow";
   font-weight: 300;
-  src: url("../../public/fonts/Gotham/narrow/GothamNarrow-Thin.otf"); }
+  src: url("../fonts/Gotham/narrow/GothamNarrow-Thin.otf"); }
 @font-face {
   font-family: "GothamNarrow";
   font-weight: 400;
-  src: url("../../public/fonts/Gotham/narrow/GothamNarrow-Book.otf"); }
+  src: url("../fonts/Gotham/narrow/GothamNarrow-Book.otf"); }
 @font-face {
   font-family: "GothamNarrow";
   font-weight: 500;
-  src: url("../../public/fonts/Gotham/narrow/GothamNarrow-Medium.otf"); }
+  src: url("../fonts/Gotham/narrow/GothamNarrow-Medium.otf"); }
 @font-face {
   font-family: "GothamNarrow";
   font-weight: 700;
-  src: url("../../public/fonts/Gotham/narrow/GothamNarrow-Ultra.otf"); }
+  src: url("../fonts/Gotham/narrow/GothamNarrow-Ultra.otf"); }
 html {
   font-family: "GothamRounded";
   font-weight: 300;
