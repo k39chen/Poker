@@ -70,6 +70,32 @@ html {
   font-family: "GothamRounded";
   font-weight: 300;
   font-size: 14px;
-  color: #595959; }
+  color: #595959;
+  height: 100%; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .page h1 {
+    font-weight: 700; }
+  .page.hero {
+    display: table;
+    text-align: center; }
+  .page > .hero {
+    display: table-cell;
+    vertical-align: middle; }
+
+#Login {
+  color: #fafafa;
+  background-image: -webkit-radial-gradient(#444, #333);
+  background-image: radial-gradient(#444, #333); }
+  #Login object {
+    fill: white;
+    stroke: white; }
 
 /*# sourceMappingURL=main.css.map */
