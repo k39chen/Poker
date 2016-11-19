@@ -1,7 +1,12 @@
+@import "bourbon/bourbon";
 @import "_fonts";
+
+$text-color: #595959;
+$light-color: #999;
 
 html {
     font-family: "GothamRounded";
     font-weight: 300;
     font-size: 14px;
+    color: $text-color;
 }

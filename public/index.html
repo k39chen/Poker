@@ -4,70 +4,31 @@
         <title>Poker</title>
 
         <!-- add the favicon to the browser tab -->
-        <link rel="icon" type="image/png" href="static/images/favicon.png"/>
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
 
         <!-- import styles -->
-        <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-        <!-- import third-party libraries (via CDN) -->
+        <!-- import third-party styles -->
+        <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <!-- import third-party libraries -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="lib/underscore-min.js"></script>
+        <script type="text/javascript" src="lib/jquery-ui-1.12.0/jquery-ui.js"></script>
+        <script type="text/javascript" src="lib/ejs_1.0_developer/ejs_production.js"></script>
+        <script type="text/javascript" src="lib/ejs_1.0_developer/ejs.js"></script>
+        <script type="text/javascript" src="lib/ejs_1.0_developer/view.js"></script>
     </head>
     <body>
-        <h1>Poker</h1>
+        <div id="app"></div>
 
+        <!-- load runtime scripts -->
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+        <script type="text/javascript" src="js/firebase.js"></script>
 
-        <div id="users"></div>
+        <script type="text/javascript" src="js/helpers/ejs.js"></script>
 
-
-        <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyBQce0nrlup-6npCVtCDprkAnluxBAsJ_g",
-                authDomain: "poker-cfe40.firebaseapp.com",
-                databaseURL: "https://poker-cfe40.firebaseio.com",
-                storageBucket: "poker-cfe40.appspot.com",
-                messagingSenderId: "654567084079"
-            };
-            firebase.initializeApp(config);
-
-            // Get a reference to the database service
-            var db = firebase.database();
-
-            // define the user data.
-            var userId = "k39chen";
-            var userData = {
-                id: "k39chen",
-                email: "k39chen@gmail.com",
-                firstName: "Kevin",
-                lastName: "Chen"
-            };
-            // add the user k39chen to the database
-            db.ref("users/" + userId).set(userData);
-
-            db.ref("users").on("value", function(snap) {
-                var usersData = snap.val();
-                console.log(usersData);
-            });
-
-            db.ref("users/" + userId).on("value", function(snap) {
-                var userData = snap.val();
-                console.log(userData);
-                renderUser(userData);
-            });
-
-            function renderUser(userData) {
-                var $users = $("#users");
-                var $user = $("<div class='user' />").appendTo($users);
-
-                _.each(userData, function(value, property) {
-                    var $row = $("<div class='row' />")
-                        .append("<span class='property'>" + property + "</span>: ")
-                        .append("<span class='value'>" + value + "</span>")
-                        .appendTo($user)
-                });
-            }
-        </script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
