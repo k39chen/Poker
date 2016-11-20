@@ -47,6 +47,41 @@ Controllers.Login = function(options) {
      */
     this.postRender = function() {
         var self = this;
+
+        // bind all the listeners
+        self.options.$el.find("input[type]").each(function() {
+            var $input = $(this);
+            var $field = $input.closest(".input-text-field");
+
+            $field.mouseover(function() { $field.addClass("hover") });
+            $field.mouseout(function() { $field.removeClass("hover") });
+            $input.focus(function() { $field.addClass("focus") });
+            $input.blur(function() { $field.removeClass("focus") });
+        });
+
+        // create the logo
+        self.createLogo();
+    };
+    /**
+     * This destroys the controller.
+     *
+     * @method destroy
+     */
+    this.destroy = function() {
+        // ...
+    };
+    /**
+     * This creates the logo on the login page.
+     *
+     * @method createLogo
+     */
+    this.createLogo = function() {
+        var self = this;
+
+        // add the logo SVG container
+        self.options.$el.find("> .hero").prepend("<svg id='logo'></svg>");
+
+        // create the snap canvas
         var s = Snap("#logo");
         var offset = $("#logo").offset();
 
@@ -72,16 +107,8 @@ Controllers.Login = function(options) {
                 }
             );
         });
+    };
 
-    };
-    /**
-     * This destroys the controller.
-     *
-     * @method destroy
-     */
-    this.destroy = function() {
-        // ...
-    };
     // initializes the contoller.
     this.init();
 }

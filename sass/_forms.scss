@@ -1,0 +1,114 @@
+html {
+    font-family: "GothamRounded";
+    font-weight: 300;
+    font-size: 14px;
+    color: $text-color;
+
+    height: 100%;
+}
+html, body {
+    margin: 0;
+    padding: 0,
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &.hero {
+        display: table;
+        text-align: center;
+    }
+    > .hero {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.input-text-field {
+    @include transition(background 0.2s);
+    cursor: text;
+    position: relative;
+    display: inline-block;
+    background: $white;
+    border-radius: 3px;
+    height: $form-element-height;
+    line-height: $form-element-height;
+    margin-bottom: 0.5em;
+    padding: 0 1.0em;
+    text-align: left;
+
+    @include box-sizing(border-box);
+
+    > i {
+        @include transition(color 0.5s);
+        color: $light-gray;
+    }
+    > input {
+        width: calc(100% - 1.95em);
+        height: 100%;
+        margin: 0 0 0 0.25em;
+        padding: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        font-family: "GothamRounded";
+        font-size: 1.0em;
+
+        @include box-sizing(border-box);
+    }
+    > .flourish {
+        @include transition(
+            width 0.5s,
+            left 0.5s,
+            opacity 0.5s
+        );
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background: $theme-color;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        opacity: 0;
+    }
+    &.hover, &.focus {
+        background: lighten($theme-color, 40%);
+
+        > i {
+            color: $theme-color;
+        }
+    }
+    &.focus {
+        > .flourish {
+            left: 0;
+            width: 100%;
+            opacity: 1.0;
+        }
+    }
+}
+button {
+    @include transition(background 0.2s);
+    cursor: pointer;
+    height: $form-element-height;
+    padding: 0.35em 0.7em;
+    border: none;
+    border-bottom: solid 0.25em darken($theme-color, 10%);
+    background: $theme-color;
+    color: $white;
+    border-radius: 3px;
+    font-size: 1.0em;
+    @include box-sizing(border-box);
+
+    &:hover, &:focus {
+        background: lighten($theme-color, 10%);
+        outline: none;
+    }
+}

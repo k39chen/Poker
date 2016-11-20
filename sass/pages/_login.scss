@@ -1,0 +1,15 @@
+#Login {
+    color: $off-white;
+    @include background-image(radial-gradient(#444, #333));
+
+    .sign-in-container {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 1.25em;
+        text-align: left;
+
+        > .input-text-field, > button {
+            width: 100%;
+        }
+    }
+}
